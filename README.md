@@ -1,7 +1,7 @@
 # GPU Sum Reduction
 
 An attempt at an optimized GPU sum reduction.
-Sum Reduction Algorithm : based on this [NVIDIA doc](http://developer.download.nvidia.com/compute/cuda/1.1-Beta/x86_website/projects/reduction/doc/reduction.pdf).
+## Sum Reduction Algorithm : [NVIDIA doc](http://developer.download.nvidia.com/compute/cuda/1.1-Beta/x86_website/projects/reduction/doc/reduction.pdf).
 
 ## Final Results
 At the last reasonable point of optimizing the implementation, the sum reduce kernel achieves about 96% of the theoretical memory bandwidth of my laptop's GPU (GeForce GTX 850M), at 13.867 GB/s versus the theoretical 14.4 GB/s. Recall that reduction is constrained mainly by memory bandwidth, since the algorithm is not compute-intensive at all. Thus, as we have acheived an excellent percentage of the theoretical memory bandwidth, we can reasonably stop at this point.
